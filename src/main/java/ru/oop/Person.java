@@ -21,7 +21,7 @@ public interface Person {
     void walk(Position destination);
 
     /**
-     * Садится в транспорт
+     * Садится в транспорт, если тот находится там же, где сам человек
      */
     void getIn(Transport transport);
 
