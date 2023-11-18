@@ -1,8 +1,8 @@
 package ru.oop;
 
 /**
- * Задача: нужно добраться человеку на машине до заданного места.<br>
- * Но не всегда можно подъехать прямо к нужному месту, может понадобиться дойти пешком.<br>
+ * Задача: нужно добраться человеку на <b>машине</b> до заданного места.<br>
+ * Но не всегда можно подъехать прямо к нужному(=заданному) месту, может понадобиться дойти пешком.<br>
  * Человек знает своё текущее местоположение (у него есть метод {@link Person#getPosition()}<br>
  * <p>
  * <ul>
@@ -21,7 +21,11 @@ public class Main {
      * Переехать из текущего места в заданную точку
      */
     public static void moveTo(Person person, Position destination) {
-        // TODO
+        Transport car = new Car(person.getPosition());
+        person.getIn(car);
+        car.goToNearest(destination);
+        person.getOff();
+        person.walk(destination);
         assert person.getPosition() == destination;
     }
 }
