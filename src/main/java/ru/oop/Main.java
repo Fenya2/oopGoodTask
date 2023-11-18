@@ -22,7 +22,7 @@ public class Main {
      */
     public static void moveTo(Person person, Position destination) {
         Transport car = new Car(person.getPosition());
-        person.getIn(car);
+        person.getIn(car); // Надо бы прописать исключение, если сесть не может.
         car.goToNearest(destination);
         person.getOff();
         person.walk(destination);

@@ -8,6 +8,9 @@ public class Car implements Transport {
         // TODO
     }
 
+    /**
+     * Едет до ближайшей к пункту назначения точке.
+     */
     @Override
     public void goToNearest(Position destination) {
         // TODO
