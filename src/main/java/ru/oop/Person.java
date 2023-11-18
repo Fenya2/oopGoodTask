@@ -26,7 +26,8 @@ public interface Person extends Positioned {
     void getOff();
 
     /**
-     * Находит подходящий, для своих целей, транспорт.
+     * Находит подходящий, для своих целей, транспорт. <br>
+     * Если транпорт не нужен, или его нет, возвращает null.
      * @return
      */
     Transport findSuitableTransport();

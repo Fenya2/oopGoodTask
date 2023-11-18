@@ -38,11 +38,14 @@ public class Main {
      * на любом, заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
-        Transport transport = person.findSuitableTransport();
-        person.walk(transport.getPosition());
-        person.getIn(transport);
-        transport.goToNearest(destination);
-        person.getOff();
+        Transport transport;
+        do {
+            transport = person.findSuitableTransport();
+            person.walk(transport.getPosition());
+            person.getIn(transport);
+            transport.goToNearest(destination);
+            person.getOff();
+        } while (transport != null)
         person.walk(destination);
         assert person.getPosition() == destination;
     }
