@@ -1,6 +1,6 @@
 package ru.oop;
 
-public class Car implements Transport {
+public class Car {
     /**
      * материализует машину в нужном месте
      */
@@ -11,7 +11,6 @@ public class Car implements Transport {
     /**
      * Едет до ближайшей к пункту назначения точке.
      */
-    @Override
     public void goToNearest(Position destination) {
         // TODO
     }

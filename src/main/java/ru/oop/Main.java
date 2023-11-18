@@ -21,7 +21,7 @@ public class Main {
      * Переехать из текущего места в заданную точку
      */
     public static void moveTo(Person person, Position destination) {
-        Transport car = new Car(person.getPosition());
+        Car car = new Car(person.getPosition());
         person.getIn(car); // Надо бы прописать исключение, если сесть не может.
         car.goToNearest(destination);
         person.getOff();

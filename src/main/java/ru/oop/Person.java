@@ -21,12 +21,12 @@ public interface Person {
     void walk(Position destination);
 
     /**
-     * Садится в транспорт, если тот находится там же, где сам человек
+     * Садится в машину, если та находится там же, где сам человек
      */
-    void getIn(Transport transport);
+    void getIn(Car car);
 
     /**
-     * Выходит из транспорта
+     * Выходит из машины
      */
     void getOff();
 }
