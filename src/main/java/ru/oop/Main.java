@@ -1,5 +1,7 @@
 package ru.oop;
 
+import java.util.List;
+
 /**
  * <b>Задача 2:</b><br>
  * Добраться человеку до заданного места.<br>
@@ -32,19 +34,16 @@ package ru.oop;
  * @since 21.10.2020
  */
 public class Main {
-
     /**
      * Переехать из текущего места в заданную точку
      * на любом, заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
-        Transport transport = person.findSuitableTransport();
-        while(transport != null) {
+        List<Transport> route = new Route().generateRoute(person.getPosition(), destination);
+        for(Transport transport : route) {
             person.walk(transport.getPosition());
-            person.getIn(transport);
+            transport.addPassenger(person);
             transport.goToNearest(destination);
-            person.getOff();
-            transport = person.findSuitableTransport();
         }
         person.walk(destination);
         assert person.getPosition() == destination;
