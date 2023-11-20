@@ -32,7 +32,6 @@ package ru.oop;
  * @since 21.10.2020
  */
 public class Main {
-
     /**
      * Переехать из текущего места в заданную точку
      * на любом, заранее определённом транспорте
@@ -40,9 +39,8 @@ public class Main {
     public static void moveTo(Person person, Position destination) {
         Transport transport = person.findSuitableTransport();
         person.walk(transport.getPosition());
-        person.getIn(transport);
+        transport.addPassenger(person);
         transport.goToNearest(destination);
-        person.getOff();
         person.walk(destination);
         assert person.getPosition() == destination;
     }

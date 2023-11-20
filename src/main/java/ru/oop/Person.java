@@ -27,7 +27,8 @@ public interface Person extends Positioned {
 
     /**
      * Находит подходящий, для своих целей, транспорт.
-     * @return
+     *
+     * @return найденный транспорт
      */
     Transport findSuitableTransport();
 }
