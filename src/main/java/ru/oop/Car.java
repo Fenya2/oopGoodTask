@@ -4,7 +4,7 @@ public class Car {
     /**
      * материализует машину в нужном месте
      */
-    public Car(Position position) {
+    public Car(Person person) {
         // TODO
     }
 

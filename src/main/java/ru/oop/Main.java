@@ -16,15 +16,12 @@ package ru.oop;
  * @since 21.10.2020
  */
 public class Main {
-
     /**
      * Переехать из текущего места в заданную точку
      */
     public static void moveTo(Person person, Position destination) {
-        Car car = new Car(person.getPosition());
-        person.getIn(car); // Надо бы прописать исключение, если сесть не может.
+        Car car = new Car(person);
         car.goToNearest(destination);
-        person.getOff();
         person.walk(destination);
         assert person.getPosition() == destination;
     }

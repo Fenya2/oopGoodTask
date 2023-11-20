@@ -19,14 +19,4 @@ public interface Person {
      * @param destination место назначения
      */
     void walk(Position destination);
-
-    /**
-     * Садится в машину, если та находится там же, где сам человек
-     */
-    void getIn(Car car);
-
-    /**
-     * Выходит из машины
-     */
-    void getOff();
 }
